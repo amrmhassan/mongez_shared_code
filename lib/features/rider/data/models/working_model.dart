@@ -1,0 +1,4 @@
+enum WorkingModel {
+  partTime,
+  fullTime,
+}
