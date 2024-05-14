@@ -7,59 +7,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mongez_shared_code/constants/shared_pref_constants.dart';
 import 'package:mongez_shared_code/constants/collections.dart';
 import 'package:mongez_shared_code/errors/custom_exception.dart';
-import 'package:mongez_shared_code/errors/firebase_errors.dart';
-import 'package:mongez_shared_code/features/auth/data/models/restaurant_user.dart';
 import 'package:mongez_shared_code/features/auth/data/models/user_model.dart';
-import 'package:mongez_shared_code/features/restaurant/data/datasources/restaurant_datasource.dart';
-import 'package:mongez_shared_code/features/restaurant/data/models/restaurant_model.dart';
 import 'package:mongez_shared_code/helpers/shared_pref_helper.dart';
 import 'package:mongez_shared_code/init/runtime_variables.dart';
 
 List<UserModel> _users = [];
 
 class AuthDatasource {
-  final RestaurantDatasource _restaurantDatasource = RestaurantDatasource();
-  Future<RestaurantUser> login(
-    String email,
-    String password,
-  ) async {
-    var userCred =
-        await fbErrorWrapper(() => firebaseAuth.signInWithEmailAndPassword(
-              email: email,
-              password: password,
-            ));
-    String? userId = userCred.user?.uid;
-    if (userId == null) {
-      throw CustomException('Can\'t login the user');
-    }
-    var data = await getUserDataById(userId);
-    if (data == null) {
-      await logout();
-      throw CustomException('We don\'t have data for this user');
-    }
-    UserModel userModel = UserModel.fromData(data);
-    if (userModel is! RestaurantUser) {
-      await logout();
-      throw CustomException('Sorry, this is not a restaurant account');
-    }
-
-    // checking if the restaurant is active
-    RestaurantModel? restaurantModel =
-        await _restaurantDatasource.getUserRestaurant(userModel.id);
-    if (restaurantModel == null) {
-      await logout();
-      throw CustomException(
-          'Sorry, there is no restaurant associated with this user');
-    }
-    if (!restaurantModel.active) {
-      await logout();
-      throw CustomException(
-          'Sorry, your restaurant is not active, please ask Admins to activate it first');
-    }
-
-    return userModel;
-  }
-
   Future<UserModel?> getLoggedInUser() async {
     await firebaseAuth.currentUser?.reload();
     String? userId = firebaseAuth.currentUser?.uid;

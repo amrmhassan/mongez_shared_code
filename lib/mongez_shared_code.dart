@@ -6,3 +6,8 @@ export 'utils/map_utils.dart';
 export 'features/auth/data/datasources/auth_validator.dart';
 export 'features/auth/data/datasources/password_datasource.dart';
 export 'features/auth/data/datasources/auth_datasource.dart';
+export 'global/height_space.dart';
+export 'features/auth/data/models/user_type.dart';
+export 'extension/string_extension.dart';
+export 'extension/date_extension.dart';
+export 'global/widgets/user_cell_copier.dart';

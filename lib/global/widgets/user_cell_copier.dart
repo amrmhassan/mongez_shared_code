@@ -6,11 +6,14 @@ class UserCellCopier extends StatelessWidget {
   final String? content;
   final String? copyMsg;
   final String? shownTxt;
+  final TextAlign? textAlign;
+
   const UserCellCopier(
     this.content, {
     super.key,
     this.copyMsg,
     this.shownTxt,
+    this.textAlign,
   });
 
   String get text {
@@ -36,6 +39,7 @@ class UserCellCopier extends StatelessWidget {
         child: Text(
           text,
           overflow: TextOverflow.ellipsis,
+          textAlign: textAlign,
         ),
       ),
     );
