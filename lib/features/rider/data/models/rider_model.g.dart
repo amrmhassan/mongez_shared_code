@@ -11,10 +11,12 @@ RiderModel _$RiderModelFromJson(Map<String, dynamic> json) => RiderModel(
       name: json['name'] as String,
       phoneNumber: json['phoneNumber'] as String,
       idImageLink: json['idImageLink'] as String,
-      maritalStatus: $enumDecode(_$MaritalStatusEnumMap, json['maritalStatus']),
+      maritalStatus:
+          $enumDecodeNullable(_$MaritalStatusEnumMap, json['maritalStatus']),
       militaryStatus:
-          $enumDecode(_$MilitaryStatusEnumMap, json['militaryStatus']),
-      workingModel: $enumDecode(_$WorkingModelEnumMap, json['workingModel']),
+          $enumDecodeNullable(_$MilitaryStatusEnumMap, json['militaryStatus']),
+      workingModel:
+          $enumDecodeNullable(_$WorkingModelEnumMap, json['workingModel']),
       vehicleLicenseLink: json['vehicleLicenseLink'] as String,
       profilePicImageLink: json['profilePicImageLink'] as String,
       officeId: json['officeId'] as String,
@@ -25,6 +27,8 @@ RiderModel _$RiderModelFromJson(Map<String, dynamic> json) => RiderModel(
       active: json['active'] as bool,
       birthDate: _$JsonConverterFromJson<String, DateTime>(
           json['birthDate'], const DateTimeConverter().fromJson),
+      status: $enumDecodeNullable(_$RiderStatusEnumMap, json['status']) ??
+          RiderStatus.free,
     );
 
 Map<String, dynamic> _$RiderModelToJson(RiderModel instance) =>
@@ -33,9 +37,9 @@ Map<String, dynamic> _$RiderModelToJson(RiderModel instance) =>
       'name': instance.name,
       'phoneNumber': instance.phoneNumber,
       'idImageLink': instance.idImageLink,
-      'maritalStatus': _$MaritalStatusEnumMap[instance.maritalStatus]!,
-      'militaryStatus': _$MilitaryStatusEnumMap[instance.militaryStatus]!,
-      'workingModel': _$WorkingModelEnumMap[instance.workingModel]!,
+      'maritalStatus': _$MaritalStatusEnumMap[instance.maritalStatus],
+      'militaryStatus': _$MilitaryStatusEnumMap[instance.militaryStatus],
+      'workingModel': _$WorkingModelEnumMap[instance.workingModel],
       'vehicleLicenseLink': instance.vehicleLicenseLink,
       'profilePicImageLink': instance.profilePicImageLink,
       'officeId': instance.officeId,
@@ -45,6 +49,7 @@ Map<String, dynamic> _$RiderModelToJson(RiderModel instance) =>
       'active': instance.active,
       'birthDate': _$JsonConverterToJson<String, DateTime>(
           instance.birthDate, const DateTimeConverter().toJson),
+      'status': _$RiderStatusEnumMap[instance.status]!,
     };
 
 const _$MaritalStatusEnumMap = {
@@ -69,6 +74,11 @@ Value? _$JsonConverterFromJson<Json, Value>(
   Value? Function(Json json) fromJson,
 ) =>
     json == null ? null : fromJson(json as Json);
+
+const _$RiderStatusEnumMap = {
+  RiderStatus.free: 'free',
+  RiderStatus.assigned: 'assigned',
+};
 
 Json? _$JsonConverterToJson<Json, Value>(
   Value? value,

@@ -26,6 +26,7 @@ class RiderModel {
   final DateTime createdAt;
   final bool active;
   final DateTime? birthDate;
+  final RiderStatus status;
 
   RiderModel({
     required this.id,
@@ -43,9 +44,53 @@ class RiderModel {
     required this.createdAt,
     required this.active,
     required this.birthDate,
+    this.status = RiderStatus.free,
   });
 
   factory RiderModel.fromJson(Map<String, dynamic> json) =>
       _$RiderModelFromJson(json);
   Map<String, dynamic> toJson() => _$RiderModelToJson(this);
+
+  RiderModel copyWith({
+    String? id,
+    String? name,
+    String? phoneNumber,
+    String? idImageLink,
+    MaritalStatus? maritalStatus,
+    MilitaryStatus? militaryStatus,
+    WorkingModel? workingModel,
+    String? vehicleLicenseLink,
+    String? profilePicImageLink,
+    String? officeId,
+    String? email,
+    String? password,
+    DateTime? createdAt,
+    bool? active,
+    DateTime? birthDate,
+    RiderStatus? status,
+  }) {
+    return RiderModel(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
+      idImageLink: idImageLink ?? this.idImageLink,
+      maritalStatus: maritalStatus ?? this.maritalStatus,
+      militaryStatus: militaryStatus ?? this.militaryStatus,
+      workingModel: workingModel ?? this.workingModel,
+      vehicleLicenseLink: vehicleLicenseLink ?? this.vehicleLicenseLink,
+      profilePicImageLink: profilePicImageLink ?? this.profilePicImageLink,
+      officeId: officeId ?? this.officeId,
+      email: email ?? this.email,
+      password: password ?? this.password,
+      createdAt: createdAt ?? this.createdAt,
+      active: active ?? this.active,
+      birthDate: birthDate ?? this.birthDate,
+      status: status ?? this.status,
+    );
+  }
+}
+
+enum RiderStatus {
+  free,
+  assigned,
 }
