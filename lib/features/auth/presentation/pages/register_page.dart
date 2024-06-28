@@ -5,7 +5,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:admin_dashboard/constants/assets.dart';
 // import 'package:admin_dashboard/constants/fast_theme.dart';
-// import 'package:shared_code/shared_code.dart';
+// import 'package:shared_code_new/shared_code_new.dart';
 // import 'package:admin_dashboard/features/auth/presentation/pages/login_page.dart';
 // import 'package:admin_dashboard/features/auth/presentation/pages/multiple_chilren_wrapper.dart';
 // import 'package:admin_dashboard/features/home/presentation/pages/main_page_holder.dart';

@@ -12,7 +12,7 @@ import 'package:mongez_shared_code/features/rider/data/models/marital_status.dar
 import 'package:mongez_shared_code/features/rider/data/models/military_status.dart';
 import 'package:mongez_shared_code/features/rider/data/models/rider_model.dart';
 import 'package:mongez_shared_code/features/rider/data/models/working_model.dart';
-import 'package:shared_code/shared_code.dart';
+import 'package:shared_code_new/shared_code_new.dart';
 
 List<RiderModel> _cache = [];
 

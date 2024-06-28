@@ -2,7 +2,7 @@ import 'package:mongez_shared_code/theming/data/constants/sizes.dart';
 import 'package:mongez_shared_code/theming/data/constants/styles.dart';
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_code/shared_code/helper/responsive.dart';
+import 'package:shared_code_new/shared_code_new/helper/responsive.dart';
 
 class GlobalTable extends StatelessWidget {
   final List<DataColumn> columns;

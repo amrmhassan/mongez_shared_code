@@ -6,9 +6,9 @@ import 'package:mongez_shared_code/features/office/data/models/office_model.dart
 import 'package:mongez_shared_code/global/widgets/dialog_title.dart';
 import 'package:mongez_shared_code/global/height_space.dart';
 import 'package:mongez_shared_code/init/runtime_variables.dart';
-import 'package:shared_code/shared_code/helper/responsive.dart';
-import 'package:shared_code/shared_code/utils/app_routes.dart';
-import 'package:shared_code/shared_code/widgets/buttons/app_main_button.dart';
+import 'package:shared_code_new/shared_code_new/helper/responsive.dart';
+import 'package:shared_code_new/shared_code_new/utils/app_routes.dart';
+import 'package:shared_code_new/shared_code_new/widgets/buttons/app_main_button.dart';
 
 class DeleteOfficeDialog extends StatefulWidget {
   final OfficeModel model;

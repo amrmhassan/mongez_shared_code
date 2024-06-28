@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mongez_shared_code/features/auth/presentation/widgets/app_text_field.dart';
-import 'package:shared_code/shared_code/constants/styles.dart';
-import 'package:shared_code/shared_code/widgets/spaces/v_space.dart';
+import 'package:shared_code_new/shared_code_new/constants/styles.dart';
+import 'package:shared_code_new/shared_code_new/widgets/spaces/v_space.dart';
 
 List<Widget> mainAuthInput({
   required BuildContext context,

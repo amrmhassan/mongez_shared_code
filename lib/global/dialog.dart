@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mongez_shared_code/constants/fast_theme.dart';
-import 'package:shared_code/shared_code/constants/sizes.dart';
-import 'package:shared_code/shared_code/helper/responsive.dart';
+import 'package:shared_code_new/shared_code_new/constants/sizes.dart';
+import 'package:shared_code_new/shared_code_new/helper/responsive.dart';
 
 void showCustomDialog({
   required BuildContext context,

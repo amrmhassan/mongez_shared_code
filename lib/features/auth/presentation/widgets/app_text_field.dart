@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shared_code/shared_code.dart';
+import 'package:shared_code_new/shared_code_new.dart';
 
 class AppTextField extends StatefulWidget {
   final String hint;

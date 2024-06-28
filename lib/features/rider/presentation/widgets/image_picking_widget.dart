@@ -7,8 +7,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:image_picker_platform_interface/src/types/image_options.dart';
-import 'package:shared_code/shared_code/constants/styles.dart';
-import 'package:shared_code/shared_code/widgets/buttons/button_wrapper.dart';
+import 'package:shared_code_new/shared_code_new/constants/styles.dart';
+import 'package:shared_code_new/shared_code_new/widgets/buttons/button_wrapper.dart';
 
 class ImagePickingWidget extends StatelessWidget {
   final XFile? pickedImage;

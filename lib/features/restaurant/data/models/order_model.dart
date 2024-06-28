@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:json_annotation/json_annotation.dart';
-import 'package:shared_code/shared_code/converters/date_time_converter.dart';
+import 'package:shared_code_new/shared_code_new/converters/date_time_converter.dart';
 
 import 'package:mongez_shared_code/features/restaurant/data/models/minified_order.dart';
 import 'package:mongez_shared_code/global/models/location_model.dart';
@@ -22,6 +22,7 @@ class OrderModel {
   final LocationModel? customerLocation;
   final String? notes;
   final OrderStatus status;
+  final String? assignedTo;
 
   OrderModel({
     required this.id,
@@ -35,7 +36,8 @@ class OrderModel {
     required this.customerPhone,
     required this.customerLocation,
     required this.notes,
-    required this.status,
+    this.status = OrderStatus.pending,
+    this.assignedTo,
   });
 
   factory OrderModel.fromJson(Map<String, dynamic> json) =>

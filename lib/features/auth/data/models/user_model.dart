@@ -4,7 +4,7 @@ import 'package:mongez_shared_code/features/auth/data/models/office_user.dart';
 import 'package:mongez_shared_code/features/auth/data/models/restaurant_user.dart';
 import 'package:mongez_shared_code/features/auth/data/models/rider_user.dart';
 import 'package:mongez_shared_code/features/auth/data/models/user_type.dart';
-import 'package:shared_code/shared_code/converters/date_time_converter.dart';
+import 'package:shared_code_new/shared_code_new/converters/date_time_converter.dart';
 part 'user_model.g.dart';
 
 @JsonSerializable()

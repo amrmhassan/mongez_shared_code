@@ -23,7 +23,9 @@ OrderModel _$OrderModelFromJson(Map<String, dynamic> json) => OrderModel(
           : LocationModel.fromJson(
               json['customerLocation'] as Map<String, dynamic>),
       notes: json['notes'] as String?,
-      status: $enumDecode(_$OrderStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$OrderStatusEnumMap, json['status']) ??
+          OrderStatus.pending,
+      assignedTo: json['assignedTo'] as String?,
     );
 
 Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
@@ -40,6 +42,7 @@ Map<String, dynamic> _$OrderModelToJson(OrderModel instance) =>
       'customerLocation': instance.customerLocation?.toJson(),
       'notes': instance.notes,
       'status': _$OrderStatusEnumMap[instance.status]!,
+      'assignedTo': instance.assignedTo,
     };
 
 const _$OrderStatusEnumMap = {

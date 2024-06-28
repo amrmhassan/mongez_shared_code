@@ -10,9 +10,9 @@ import 'package:mongez_shared_code/global/widgets/global_table.dart';
 import 'package:mongez_shared_code/global/widgets/user_cell_copier.dart';
 import 'package:mongez_shared_code/init/runtime_variables.dart';
 import 'package:mongez_shared_code/theming/data/constants/styles.dart';
-import 'package:shared_code/shared_code.dart';
-import 'package:shared_code/shared_code/helper/responsive.dart';
-import 'package:shared_code/shared_code/widgets/buttons/app_main_button.dart';
+import 'package:shared_code_new/shared_code_new.dart';
+import 'package:shared_code_new/shared_code_new/helper/responsive.dart';
+import 'package:shared_code_new/shared_code_new/widgets/buttons/app_main_button.dart';
 
 class OfficePage extends StatefulWidget {
   const OfficePage({super.key});

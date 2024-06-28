@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:shared_code/shared_code/helper/responsive.dart';
+import 'package:shared_code_new/shared_code_new/helper/responsive.dart';
 
 class MultipleChildrenWrapper extends StatelessWidget {
   final List<Widget> children;

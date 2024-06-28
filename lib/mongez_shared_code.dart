@@ -28,6 +28,7 @@ export 'features/rider/data/models/working_model.dart';
 //? constants
 export 'constants/remote_storage.dart';
 export 'constants/realtime_collections.dart';
+export 'constants/rider_realtime_collections.dart';
 
 //? global
 export 'init/runtime_variables.dart';

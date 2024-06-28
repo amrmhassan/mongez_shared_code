@@ -1,4 +1,4 @@
-import 'package:shared_code/shared_code.dart';
+import 'package:shared_code_new/shared_code_new.dart';
 
 class AuthValidator {
   String? email(String email) {

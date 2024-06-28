@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:json_annotation/json_annotation.dart';
-import 'package:shared_code/shared_code/converters/date_time_converter.dart';
+import 'package:shared_code_new/shared_code_new/converters/date_time_converter.dart';
 
 import 'package:mongez_shared_code/features/rider/data/models/marital_status.dart';
 import 'package:mongez_shared_code/features/rider/data/models/military_status.dart';

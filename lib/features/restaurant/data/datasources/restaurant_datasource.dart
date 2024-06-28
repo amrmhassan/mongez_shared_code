@@ -9,7 +9,7 @@ import 'package:mongez_shared_code/features/office/data/datasources/office_datas
 import 'package:mongez_shared_code/features/office/data/models/office_model.dart';
 import 'package:mongez_shared_code/features/restaurant/data/models/restaurant_model.dart';
 import 'package:mongez_shared_code/global/models/location_model.dart';
-import 'package:shared_code/shared_code.dart';
+import 'package:shared_code_new/shared_code_new.dart';
 
 List<RestaurantModel> _cache = [];
 
