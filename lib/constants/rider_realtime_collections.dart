@@ -8,6 +8,10 @@ class RiderRealTimeCollections {
     return '$_riders/$riderId/$_status';
   }
 
+  static String get riders {
+    return '$_riders';
+  }
+
   static String location(String riderId) {
     return '$_riders/$riderId/$_location';
   }

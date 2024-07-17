@@ -36,7 +36,7 @@ class OrderModel {
     required this.customerPhone,
     required this.customerLocation,
     required this.notes,
-    this.status = OrderStatus.pending,
+   required this.status,
     this.assignedTo,
   });
 
