@@ -24,6 +24,8 @@ export 'features/restaurant/data/models/restaurant_model.dart';
 export 'features/rider/data/models/rider_model.dart';
 export 'features/rider/data/models/military_status.dart';
 export 'features/rider/data/models/working_model.dart';
+export 'features/restaurant/data/models/order_logging.dart';
+export 'features/restaurant/data/datasources/logging_datasource.dart';
 
 //? constants
 export 'constants/remote_storage.dart';

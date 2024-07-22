@@ -23,8 +23,7 @@ OrderModel _$OrderModelFromJson(Map<String, dynamic> json) => OrderModel(
           : LocationModel.fromJson(
               json['customerLocation'] as Map<String, dynamic>),
       notes: json['notes'] as String?,
-      status: $enumDecodeNullable(_$OrderStatusEnumMap, json['status']) ??
-          OrderStatus.pending,
+      status: $enumDecode(_$OrderStatusEnumMap, json['status']),
       assignedTo: json['assignedTo'] as String?,
     );
 
